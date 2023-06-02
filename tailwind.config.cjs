@@ -9,6 +9,15 @@ module.exports = {
 				'orange': '#FE675D',
 				'dark-blue': '#33658A',
 				'light-blue': '#D8D3FB',
+			},
+			keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        }
+      },
+			animation: {
+				wiggle: 'wiggle 1s ease-in-out infinite',
 			}
 		},
 	},
