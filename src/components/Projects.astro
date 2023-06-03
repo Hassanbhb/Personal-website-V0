@@ -1,0 +1,15 @@
+---
+import MoroccoInData_img from '../assets/MoroccoIndata.jpg'
+import CardProject from './CardProject.astro'
+---
+
+<section id='projects' class="flex flex-col h-screen pt-12">
+  <h1 class="mb-32 text-8xl font-bold text-center text-light-blue opacity-40">Projects</h1>
+  <div class="w-4/5 mx-auto ">
+    <CardProject 
+      title="MoroccoInData" 
+      link="https://moroccoindata.streamlit.app"
+      imgSrc={MoroccoInData_img.src} 
+      tools={['Streamlit', 'Python', 'Pandas', 'Plotly', 'Web scraping']} />
+  </div>
+</section>
