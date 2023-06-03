@@ -1,0 +1,34 @@
+---
+import Link_icon from '../assets/Link_icon.svg'
+import readMore from '../assets/readMore_icon.svg'
+const { title, link , imgSrc, tools} = Astro.props
+const getRandomColor = (i) => {
+    const colors = [
+      'text-red-400',
+      'text-yellow-400',
+      'text-green-400',
+      'text-blue-400',
+      'text-indigo-400',
+      'text-purple-400',
+      'text-pink-400',
+    ];
+    return colors[i]
+};
+---
+
+<h2 class="text-4xl mb-4">{title}</h2>
+<div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.eius molestiae tempora laudantium ut? Repellat nisi aliquam ipsum dolor similique, tempore sed?</p>
+  <img class="mt-4 object-cover rounded-md" src={imgSrc} min-width="200"/>
+</div>
+<div>
+  {tools.map((tool, i) => <span class=`text-xs ${getRandomColor(i)}`>#{tool} </span>)}
+</div>
+<div class="flex flex-row items-center justify-between">
+  <a href={link} title=`Project ${title} link`>
+    <img src={Link_icon.src} class="w-8 h-8 my-4 hover:animate-wiggle"/>
+  </a>
+  <a href="#" class="flex flex-row items-center" title="More details about the project">
+    more <img src={readMore.src} class="w-8 h-8 ml-2 hover:animate-wiggle"/>
+  </a>
+</div>
