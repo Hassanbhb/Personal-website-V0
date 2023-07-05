@@ -4,11 +4,11 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				'black': '#241023',
+				'black': '#1d081a',
 				'white': '#FAFBFF',
 				'orange': '#FE675D',
-				'dark-blue': '#33658A',
-				'light-blue': '#D8D3FB',
+				'primary': '#edebed',
+				'secondary': '#dbd1d9',
 			},
 			keyframes: {
         wiggle: {
