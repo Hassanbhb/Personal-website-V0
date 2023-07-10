@@ -1,0 +1,14 @@
+---
+import Link_icon from '../assets/Link_icon.svg'
+import readMore from '../assets/readMore_icon.svg'
+const { title, link , summary, tags} = Astro.props
+---
+<article class="px-3 mb-4 rounded-sm border-orange">
+  <div class="w-4/5 mx-auto">
+    <a href={link} >
+      <h3 class="font-bold text-xl mb-2 underline underline-offset-4">{title}</h3>
+      <p class="mb-1 text-secondary">{summary}</p>
+      <p class="text-orange opacity-90">Read More ...</p>
+    </a>
+  </div>
+</article>
