@@ -9,21 +9,21 @@ import linkedin_icon from "../assets/linkedin_icon.svg"
   id="welcome"
   class="min-h-screen flex items-center justify-center"
 >
-  <div class="text-center">
+  <div class="text-center md:text-left">
     <p class="animate-fadeIn">Hello, I'm</p>
     <p
-      class="opacity-0 animate-fadeIn animation-delay-500 font-bold text-4xl mt-6 mb-4"
+      class="opacity-0 animate-fadeIn animation-delay-300 font-bold text-4xl md:text-6xl mt-6 mb-4"
     >
       <span class="text-orange">H</span>assan
       <span class="text-orange">B</span>en
       <span class="text-orange">H</span>aj
       <span class="text-orange">B</span>ouih
     </p>
-    <p class="opacity-0 animate-fadeIn animation-delay-700">
+    <p class="opacity-0 animate-fadeIn animation-delay-500 md:text-lg">
       I build Web Applications
     </p>
     <div
-      class="opacity-0 animate-fadeIn animation-delay-1000 mt-6 flex flex-row items-center justify-center"
+      class="opacity-0 animate-fadeIn animation-delay-700 mt-6 flex flex-row items-center justify-center md:justify-start"
     >
       <a
         href="https://twitter.com/hassan_bhb"
@@ -31,8 +31,7 @@ import linkedin_icon from "../assets/linkedin_icon.svg"
         title="My twitter account link"
         ><img
           src={twitter_icon.src}
-          width="25"
-          height="25"
+          class="w-7 "
           alt="Twitter icon"
         /></a
       >
@@ -42,8 +41,7 @@ import linkedin_icon from "../assets/linkedin_icon.svg"
         title="My github account link"
         ><img
           src={github_icon.src}
-          width="25"
-          height="25"
+          class="w-7 "
           alt="Github Icon"
         /></a
       >
@@ -53,17 +51,14 @@ import linkedin_icon from "../assets/linkedin_icon.svg"
         title="My linkedin account link"
         ><img
           src={linkedin_icon.src}
-          width="25"
-          height="25"
+          class="w-7 "
           alt="Linkedin icon"
         /></a
       >
       <a href="#" class="p-2" title="My cv link"
         ><img
-          class="animate-wiggle"
+          class="animate-wiggle w-7 "
           src={cv_icon.src}
-          width="25"
-          height="25"
           alt="CV icon"
         /></a
       >
