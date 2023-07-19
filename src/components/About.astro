@@ -1,4 +1,6 @@
 ---
+const skills = ["Javascript", "PHP", "React", "Astro", "NodeJS", "Laravel", "Python", "MySQL", "MongoDB", "HTML", "CSS"]
+import SkillComponent from "./SkillComponent.astro";
 ---
 
 <section id="about" class="pt-16 h-fit">
@@ -8,25 +10,17 @@
     ABOUT
   </h1>
   <div class="w-4/5 m-auto">
-    <div class="md:text-xl md:mb-10 md:leading-8 md:tracking-wide">
+    <div class="md:text-lg md:mb-10 md:leading-8 md:tracking-wide">
       <p>I started programming while I was in Law university, when this question popped in my head.</p>
       <p>How are these websites we use every day made?</p>
       <p>And then my journey in web development began and I now I am a passionate Full-stack developper. My expertise is developing fast & engaging websites. </p>
     </div>
     <div class="pt-5">
       <h2 class="text-xl md:text-2xl py-5 tracking-widest">FULL STACK DEVELOPMENT</h2>
-      <ul class="list-none flex md:text-xl flex-row flex-wrap gap-5">
-        <li class="bg-orange bg-opacity-40 py-1 px-3 md:py-3 md:px-4 rounded-sm ">Javascript</li>
-        <li class="bg-orange bg-opacity-40 py-1 px-3 md:py-3 md:px-4 rounded-sm">PHP</li>
-        <li class="bg-orange bg-opacity-40 py-1 px-3 md:py-3 md:px-4 rounded-sm">React</li>
-        <li class="bg-orange bg-opacity-40 py-1 px-3 md:py-3 md:px-4 rounded-sm">Astro</li>
-        <li class="bg-orange bg-opacity-40 py-1 px-3 md:py-3 md:px-4 rounded-sm">NodeJS</li>
-        <li class="bg-orange bg-opacity-40 py-1 px-3 md:py-3 md:px-4 rounded-sm">Laravel</li>
-        <li class="bg-orange bg-opacity-40 py-1 px-3 md:py-3 md:px-4 rounded-sm">Python</li>
-        <li class="bg-orange bg-opacity-40 py-1 px-3 md:py-3 md:px-4 rounded-sm">MySQL</li>
-        <li class="bg-orange bg-opacity-40 py-1 px-3 md:py-3 md:px-4 rounded-sm">MongoDB</li>
-        <li class="bg-orange bg-opacity-40 py-1 px-3 md:py-3 md:px-4 rounded-sm">HTML</li>
-        <li class="bg-orange bg-opacity-40 py-1 px-3 md:py-3 md:px-4 rounded-sm">CSS</li>
+      <ul class="list-none flex md:text-lg flex-row flex-wrap gap-5">
+        {skills.map(item => (
+          <SkillComponent skill={item} />
+        ))}
       </ul>
     </div>
     <div class="pt-5">
