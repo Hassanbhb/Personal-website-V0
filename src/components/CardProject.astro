@@ -25,7 +25,7 @@ const getRandomColor = (i) => {
     {tools.map((tool, i) => <span class=`text-xs ${getRandomColor(i)} md:text-base`> #{tool} </span>)}
   </div>
   <div class="flex flex-row items-center justify-between">
-    <a href={link} title=`Project ${title} link`>
+    <a href={link} target="_blank" title=`Project ${title} link`>
       <img src={Link_icon.src} class="w-8 h-8 my-4 hover:animate-wiggle"/>
     </a>
     <a href="#" class="flex flex-row items-center hover:animate-wiggle underline underline-offset-4" title="More details about the project">
