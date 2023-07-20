@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			colors: {
@@ -9,6 +10,7 @@ module.exports = {
 				'orange': '#FE675D',
 				'primary': '#edebed',
 				'secondary': '#dbd1d9',
+				'alt': '#D8D3FB'
 			},
 			keyframes: {
         wiggle: {
