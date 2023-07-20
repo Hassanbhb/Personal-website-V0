@@ -10,7 +10,7 @@ module.exports = {
 				'orange': '#FE675D',
 				'primary': '#edebed',
 				'secondary': '#dbd1d9',
-				'alt': '#D8D3FB'
+				'alt': '#695967'
 			},
 			keyframes: {
         wiggle: {
