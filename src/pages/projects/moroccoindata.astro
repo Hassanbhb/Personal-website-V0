@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import logo_project_moroccoindata from "../../assets/project_logo_moroccoindata.svg"
+import icon_github from '../../assets/github_icon.svg'
+import link_2_icon from '../../assets/link_2_icon.svg'
+import Pyramid from '../../assets/Pyramid.gif'
+
+---
+
+<BaseLayout >
+  <div class="w-4/6 md:w-3/6 m-auto mt-10 mb-10">
+    <img src={logo_project_moroccoindata.src} class="" alt="Morroco in data project logo">
+    <div class="mt-5 text-sm md:text-lg flex flex-row gap-10 justify-center">
+      <a href="https://github.com/Hassanbhb/MoroccoInData" target="_blank"  class="w-20 flex align-middle justify-center gap-1 py-2 px-3 border border-secondary rounded-sm">
+        <img src={icon_github.src} alt="github icon" class="w-4"> 
+        Code
+      </a>
+      <a href="https://moroccoindata.streamlit.app/" target="_blank"  class="w-20 flex align-middle justify-center gap-1 py-2 px-3 border border-secondary rounded-sm">
+        Live
+        <img src={link_2_icon.src} alt="arrow icon" class="w-4"> 
+      </a>
+    </div>
+  </div>
+  <div class="w-5/6 md:w-3/6 m-auto mb-16">
+    <p>
+      Morocco in data is a web app where you can access consolidated data on Morocco's demographics, economy and more. 
+      The data was collected from multiple sources and displayed in one place.
+    </p>
+    
+    <div class="my-10">
+      <h2 class="font-bold text-lg mb-3">Features</h3>
+      <ul class="mb-3 flex flex-row gap-2">
+        <li class="border-l-2 border-orange pl-2">Interactive charts</li>
+        <li class="border-l-2 border-orange pl-2">Data Analysis</li>
+        <li class="border-l-2 border-orange pl-2">Open Source</li>
+      </ul>
+      <div>
+        <img src={Pyramid.src} alt="Population pyramid g i f">
+      </div>
+    </div>
+    
+    <div>
+      <h3 class="font-bold text-lg">Goal:</h3>
+      <p class="indent-5">The goal of this project is to make Data on Morocco available in one location and from different sources, and simplify accessiblity for all visitors.</p>
+      <p class="indent-5">This was a Great opportunity to solidify my knowledge of Python and learn about Data analysis, especially data visualization ( which is the fun part ). </p>
+    </div>
+
+    <div class="my-10">
+      <h2 class="font-bold text-lg mb-3">Technologies used:</h3>
+      <ul class="list-disc list-inside">
+        <li>
+          <span class="font-bold">Streamlit : </span>
+          A Framework which makes building and sharing data apps faster.
+        </li>
+        <li>
+          <span class="font-bold">Plotly : </span>
+          Used to Visualize the data and add interactivity.
+        </li>
+        <li>
+          <span class="font-bold">Pandas : </span>
+          For Data manipulation and analysis.
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-bold text-lg">Details:</h3>
+      <p class="indent-5">
+        I Collected the data available on Global known websites such as 
+        <a href="https://www.who.int/" class="underline underline-offset-4">World Health Organization</a>, 
+        <a href="https://www.worldbank.org/" class="underline underline-offset-4">World bank</a> and from Government websites such as 
+        <a href="https://www.data.gov.ma/" class="underline underline-offset-4">National Open Data Portal</a> 
+        and
+        <a href="https://www.hcp.ma/" class="underline underline-offset-4">Haut-commisariat au plan</a>.
+      </p>
+      <p class="indent-5">Future plans for this project is creating Web scraping tools for automatic and faster data collection in case new data is available.</p>
+    </div>
+    
+  </div>
+</BaseLayout>
