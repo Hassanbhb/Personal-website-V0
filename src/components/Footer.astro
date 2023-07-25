@@ -1,0 +1,40 @@
+---
+import twitter_icon from "../assets/twitter_icon.svg"
+import github_icon from "../assets/github_icon.svg"
+import linkedin_icon from "../assets/linkedin_icon.svg"
+const {showSocials} = Astro.props
+---
+
+<div class="flex flex-row justify-evenly items-center bg-orange bg-opacity-60 py-3 mt-5 rounded-sm md:mt-12 md:w-4/5 md:m-auto">
+  <p class="">Hassan Ben Haj Bouih © 2023</p>
+  {showSocials && 
+    <div class="flex flex-row items-center">
+      <a
+        href="https://twitter.com/hassan_bhb"
+        class="p-2"
+        title="My twitter account"
+        ><img
+          src={twitter_icon.src}
+          width="20"
+          alt="Twitter icon"
+        />
+      </a>
+      <a
+        href="https://github.com/Hassanbhb"
+        class="p-2"
+        title="My github account"
+        ><img
+          src={github_icon.src}
+          width="20"
+          alt="Github Icon"
+        />
+      </a>
+      <a href="https://www.linkedin.com/in/hassan-ben-haj-bouih-014084121/" class="p-2" title="My linkedIn account"
+        ><img
+          src={linkedin_icon.src}
+          width="20"
+          alt="linkedin icon"
+        />
+      </a>
+    </div> }
+</div>
