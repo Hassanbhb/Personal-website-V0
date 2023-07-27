@@ -1,7 +1,8 @@
 ---
 import Link_icon from '../assets/Link_icon.svg'
+import github_icon from "../assets/github_icon.svg"
 import readMore from '../assets/readMore_icon.svg'
-const { title, link, page , imgSrc, tools} = Astro.props
+const { title, link, github_link, page , imgSrc, tools} = Astro.props
 const getRandomColor = (i) => {
     const colors = [
       'text-red-400',
@@ -25,9 +26,14 @@ const getRandomColor = (i) => {
     {tools.map((tool, i) => <span class=`text-xs ${getRandomColor(i)} md:text-base`> #{tool} </span>)}
   </div>
   <div class="flex flex-row items-center justify-between">
-    <a href={link} target="_blank" title=`Project ${title} link`>
-      <img src={Link_icon.src} class="w-8 h-8 my-4 hover:animate-wiggle"/>
-    </a>
+    <div class="flex flex-row gap-4" >
+      <a href={link} target="_blank" title=`Project ${title} link`>
+        <img src={Link_icon.src} class="w-8 h-8 my-4 hover:animate-wiggle" alt="link icon" />
+      </a>
+      <a href={github_link} target="_blank" title='Github link'>
+        <img src={github_icon.src} class="w-8 h-8 my-4 hover:animate-wiggle" alt="Github icon"/>  
+      </a>
+    </div>
     <a href={page} class="flex flex-row items-center underline underline-offset-4" title="More details about the project">
       Read more <img src={readMore.src} class="w-8 h-8 ml-2 "/>
     </a>
