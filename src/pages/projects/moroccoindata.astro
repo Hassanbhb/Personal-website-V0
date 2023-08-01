@@ -5,6 +5,8 @@ import icon_github from '../../assets/github_icon.svg'
 import link_2_icon from '../../assets/link_2_icon.svg'
 import Pyramid from '../../assets/Pyramid.gif'
 import Footer from "../../components/Footer.astro";
+
+import { Image } from "astro:assets";
 ---
 
 <BaseLayout pageTitle="Morocco in data | Projects" >
@@ -35,7 +37,7 @@ import Footer from "../../components/Footer.astro";
         <li class="border-l-2 border-orange pl-2">Open Source</li>
       </ul>
       <div>
-        <img src={Pyramid.src} alt="Population pyramid g i f">
+        <Image src={Pyramid} alt="Population pyramid g i f"/>
       </div>
     </div>
     

@@ -2,6 +2,9 @@
 import Link_icon from '../assets/Link_icon.svg'
 import github_icon from "../assets/github_icon.svg"
 import readMore from '../assets/readMore_icon.svg'
+
+import { Image } from 'astro:assets'
+
 const { title, link, github_link, page , imgSrc, tools} = Astro.props
 const getRandomColor = (i) => {
     const colors = [
@@ -20,7 +23,7 @@ const getRandomColor = (i) => {
   <h2 class="text-2xl mb-3">{title}</h2>
   <div class="md:flex md:flex-row md:items-center md:gap-x-4">
     <p class="md:text-xl tracking-wide md:leading-8">Here you can find consolidated data on Morocco's demographics, economy and more. We've gathered information from multiple sources, ensuring you have a comprehensive view in one convenient place.</p>
-    <img class="mt-4 object-cover rounded-md md:w-5/12" src={imgSrc} min-width="200" alt="preview image the project"/>
+    <Image src={imgSrc} alt="preview image the project" class="mt-4 object-cover rounded-md md:w-5/12"/>
   </div>
   <div class="md:mt-3">
     {tools.map((tool, i) => <span class=`text-xs ${getRandomColor(i)} md:text-base`> #{tool} </span>)}
