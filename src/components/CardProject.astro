@@ -20,7 +20,7 @@ const getRandomColor = (i) => {
   <h2 class="text-2xl mb-3">{title}</h2>
   <div class="md:flex md:flex-row md:items-center md:gap-x-4">
     <p class="md:text-xl tracking-wide md:leading-8">Here you can find consolidated data on Morocco's demographics, economy and more. We've gathered information from multiple sources, ensuring you have a comprehensive view in one convenient place.</p>
-    <img class="mt-4 object-cover rounded-md md:w-5/12" src={imgSrc} min-width="200"/>
+    <img class="mt-4 object-cover rounded-md md:w-5/12" src={imgSrc} min-width="200" alt="preview image the project"/>
   </div>
   <div class="md:mt-3">
     {tools.map((tool, i) => <span class=`text-xs ${getRandomColor(i)} md:text-base`> #{tool} </span>)}
@@ -35,7 +35,7 @@ const getRandomColor = (i) => {
       </a>
     </div>
     <a href={page} class="flex flex-row items-center underline underline-offset-4" title="More details about the project">
-      Read more <img src={readMore.src} class="w-8 h-8 ml-2 "/>
+      About the project <img src={readMore.src} class="w-8 h-8 ml-2 " alt="Read more about Morocco in data icon"/>
     </a>
   </div>
 </div>

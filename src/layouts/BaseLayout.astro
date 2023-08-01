@@ -1,14 +1,44 @@
 ---
+import { SEO } from "astro-seo"
 import Nav from '../components/Nav.astro'
+import twitter_card from "../assets/twitter_card.png"
 const { pageTitle } = Astro.props
 ---
 <html lang="en" class=" scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<SEO 
+			title = {pageTitle}
+			description="Hassan is a software developer with experience building fullStack websites, with a focus on making websites efficient & fast"
+			openGraph={{
+        basic: {
+          title: "Hassan ben haj bouih - A Software developer ",
+          type: "website",
+          image: twitter_card.src,
+					url: "https://hassanbenhajbouih.com",
+        }
+      }}
+			twitter={{
+				card: "summary_large_image",
+				creator: "@hassan_bhb", 
+				title:pageTitle,
+				description: "Building efficient and fast websites",
+				image: twitter_card.src,           
+			}}
+			extend={{
+				link: [{rel:"icon", href: "/favicon.svg"}],
+				meta: [
+					{
+						name: "twitter/image",
+						content: twitter_card.src,
+					},
+					{ name: "twitter:title", content: "Hassan ben haj bouih Portfolio" },
+					{ name: "twitter:description", content: "Hassan ben haj bouih Portfolio" },
+				]
+			}}
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
 	</head>
 	<body class="dark:bg-black bg-white text-black dark:text-primary lg:w-4/6 lg:m-auto mb-16 md:mb-0">
 		<Nav/>
