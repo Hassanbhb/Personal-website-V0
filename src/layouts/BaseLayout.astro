@@ -1,52 +1,62 @@
 ---
-import { SEO } from "astro-seo"
-import Nav from '../components/Nav.astro'
-import twitter_card from "../assets/seo/twitter_card.png"
-const { pageTitle } = Astro.props
+import { SEO } from "astro-seo";
+import Nav from "../components/Nav.astro";
+import twitter_card from "../assets/seo/twitter_card.png";
+const { pageTitle } = Astro.props;
 ---
-<html lang="en" class=" scroll-smooth">
-	<head>
-		<meta charset="utf-8" />
-		<SEO 
-			title = {pageTitle}
-			description="Hassan is a software developer with experience building fullStack websites, with a focus on making websites efficient & fast"
-			openGraph={{
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <SEO
+      title={pageTitle}
+      description="Hassan is a software developer with experience building fullStack websites, with a focus on making websites efficient & fast"
+      openGraph={{
         basic: {
           title: "Hassan ben haj bouih - A Software developer ",
           type: "website",
-          image: twitter_card.src,
-					url: "https://hassanbenhajbouih.com",
-        }
+          image:
+            "https://github.com/Hassanbhb/Personal-website/blob/main/src/assets/seo/twitter_card.png?raw=true",
+          url: "https://hassanbenhajbouih.com",
+        },
       }}
-			twitter={{
-				card: "summary_large_image",
-				creator: "@hassan_bhb", 
-				title:pageTitle,
-				description: "Building efficient and fast websites",
-				image: twitter_card.src,           
-			}}
-			extend={{
-				link: [{rel:"icon", href: "/favicon.svg"}],
-				meta: [
-					{
-						name: "twitter/image",
-						content: twitter_card.src,
-					},
-					{ name: "twitter:title", content: "Hassan ben haj bouih Portfolio" },
-					{ name: "twitter:description", content: "Hassan ben haj bouih Portfolio" },
-				]
-			}}
-		/>
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-	</head>
-	<body class="dark:bg-black bg-white text-black dark:text-primary lg:w-4/6 lg:m-auto mb-16 md:mb-0">
-		<Nav/>
-		<slot />
-	</body>
+      twitter={{
+        card: "summary_large_image",
+        creator: "@hassan_bhb",
+        title: pageTitle,
+        description: "Building efficient and fast websites",
+        image: twitter_card.src,
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.svg" }],
+        meta: [
+          {
+            name: "twitter/image",
+            content: twitter_card.src,
+          },
+          {
+            name: "twitter:title",
+            content: "Hassan ben haj bouih - Software developer",
+          },
+          {
+            name: "twitter:description",
+            content:
+              "I am a software developer with experience building fullStack websites, with a focus on making websites efficient & fast",
+          },
+        ],
+      }}
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body
+    class="dark:bg-black bg-white text-black dark:text-primary lg:w-4/6 lg:m-auto mb-16 md:mb-0"
+  >
+    <Nav />
+    <slot />
+  </body><script>
+    import AOS from "aos";
+    import "aos/dist/aos.css";
+    AOS.init();
+  </script>
 </html>
-<script>
-	import AOS from 'aos'
-	import 'aos/dist/aos.css'
-	AOS.init()
-</script>
