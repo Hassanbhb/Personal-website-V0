@@ -1,0 +1,13 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+
+const { pageTitle} = Astro.props
+---
+
+<BaseLayout pageTitle={pageTitle} >
+  <article class="prose lg:prose-xl dark:prose-invert prose-h1:text-orange prose-h1:font-medium dark:prose-a:text-primary w-5/6 m-auto mt-16 mb-16">
+    <slot />
+  </article>
+  <Footer showSocials={true} />
+</BaseLayout>
