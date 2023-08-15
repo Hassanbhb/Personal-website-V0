@@ -29,6 +29,7 @@ module.exports = {
 		},
 	},
 	plugins: [
-		require("tailwindcss-animation-delay")
+		require("tailwindcss-animation-delay"),
+		require("@tailwindcss/typography")
 	],
 }
