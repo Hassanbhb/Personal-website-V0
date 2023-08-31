@@ -1,19 +1,22 @@
 ---
 slug: morocco-in-data
-title: Morocco in data | Projects
+pageTitle: Morocco in data | Projects
+articleTitle: Morocco in data
+author: Hassan ben haj bouih
 description:  Morocco in data is a web app where you can access consolidated data on Morocco's demographics, economy and more.
   The data was collected from multiple sources and displayed in one place.
-image: '../../assets/Pyramid.gif'
+cover: '../../assets/moroccoindata_gif.gif'
+coverAlt: 'Project preview g i f'
 tags:
   - Python
   - Streamlit
   - Pandas
   - Plotly
 ---
-
-# Morocco in data
+<!-- ![Project preview g i f](../../assets/moroccoindata_gif.gif) -->
 
 [Code](https://github.com/Hassanbhb/MoroccoInData "Github repository") | [Live](https://moroccoindata.streamlit.app/)
+
 
 <details> 
   <summary>Table of content</summary>
@@ -24,7 +27,6 @@ tags:
   - [Details](#details)
 </details>
 
-![Project preview g i f](../../assets/moroccoindata_gif.gif)
 
 Morocco in data is a web app where you can access consolidated data on Morocco's demographics, economy and more.
 The data was collected from multiple sources and displayed in one place.
