@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets"
 import Logo from "../assets/logo.svg";
 import Moon from "../assets/moon.svg";
 import Sun from "../assets/sun.svg";
@@ -9,7 +10,7 @@ import Sun from "../assets/sun.svg";
 >
   <div class="w-20">
     <a href="/#welcome" class="flex items-center h-full w-full">
-      <img src={Logo.src} alt="Logo" class="w-6 md:w-8 m-auto md:m-0" />
+      <Image src={Logo} class="w-6 md:w-8 m-auto md:m-0" alt="Logo"/>
     </a>
   </div>
   <div class="flex mr-5 md:mr-0">
@@ -21,8 +22,8 @@ import Sun from "../assets/sun.svg";
       >Contact</a
     >
     <button class="mode_btn self-center py-4 px-4 w-12 border border-secondary border-opacity-40 rounded-sm">
-      <img src={Moon.src} class="moon" alt="Dark mode icon">
-      <img src={Sun.src} class="sun" alt="Light mode icon">
+      <Image src={Moon} class="moon" alt="Dark mode icon"/>
+      <Image src={Sun} class="sun" alt="Light mode icon"/>
     </button>
   </div>
 </nav>

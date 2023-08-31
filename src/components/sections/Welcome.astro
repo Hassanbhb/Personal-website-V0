@@ -1,9 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import cv_icon from "../../assets/cv_icon.svg";
 import twitter_icon from "../../assets/twitter_icon.svg";
 import github_icon from "../../assets/github_icon.svg";
-import linkedin_icon from "../../assets/linkedin_icon.svg"
-import CV from "../../assets/hassanbenhajbouih.pdf"
+import linkedin_icon from "../../assets/linkedin_icon.svg";
+import CV from "../../assets/hassanbenhajbouih.pdf";
 ---
 
 <section
@@ -30,39 +31,27 @@ import CV from "../../assets/hassanbenhajbouih.pdf"
         href="https://twitter.com/hassan_bhb"
         class="p-2"
         title="My twitter account link"
-        ><img
-          src={twitter_icon.src}
-          class="w-7 "
-          alt="Twitter icon"
-        /></a
       >
+        <Image src={twitter_icon} class="w-7" alt="Twitter icon" />
+      </a>
       <a
         href="https://github.com/Hassanbhb"
         class="p-2"
         title="My github account link"
-        ><img
-          src={github_icon.src}
-          class="w-7 "
-          alt="Github Icon"
-        /></a
+        >
+        <Image src={github_icon} class="w-7" alt="Github icon" />  
+      </a
       >
       <a
         href="https://www.linkedin.com/in/hassan-ben-haj-bouih-014084121/"
         class="p-2"
         title="My linkedin account link"
-        ><img
-          src={linkedin_icon.src}
-          class="w-7 "
-          alt="Linkedin icon"
-        /></a
-      >
-      <a aria-label="Open P D F file" href={CV} class="p-2" title="My cv link"
-        ><img
-          class="animate-wiggle w-7 "
-          src={cv_icon.src}
-          alt="CV icon"
-        /></a
-      >
+        >
+        <Image src={linkedin_icon} class="w-7" alt="Linkedin icon" />
+      </a>
+      <a aria-label="Open P D F file" href={CV} class="p-2" title="My cv link">
+        <Image src={cv_icon} class="w-7" alt="CV icon"/>
+      </a>
     </div>
   </div>
 </section>
