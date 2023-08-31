@@ -7,9 +7,6 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: 'https://hassanbenhajbouih.com',
   integrations: [tailwind(), sitemap()],
-  experimental: {
-    assets: true
-  },
   image: {
     service: sharpImageService()
   }
