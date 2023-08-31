@@ -10,7 +10,7 @@ const { pageTitle, articleTitle, author, cover, coverAlt} = Astro.props
   <article class="prose lg:prose-xl dark:prose-invert dark:prose-a:text-primary w-5/6 m-auto mt-16 mb-16">
     <h1 class="text-orange font-medium mb-1">{ articleTitle }</h1>
     <p class="m-0 font-thin text-sm"><b>Author: </b> { author } </p>
-    <Image src={cover} transition:name="cover" alt={coverAlt} />
+    <Image src={cover} alt={coverAlt} />
     <slot />
   </article>
   <Footer showSocials={true} />
