@@ -51,6 +51,10 @@ const { pageTitle } = Astro.props;
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
     <ViewTransitions />
+    <script is:inline>
+      const storedTheme = localStorage.getItem('theme')
+      document.documentElement.classList.add(storedTheme);
+    </script>
   </head>
   <body
     class="dark:bg-black bg-white text-black dark:text-primary lg:w-4/6 lg:m-auto mb-16 md:mb-0"
