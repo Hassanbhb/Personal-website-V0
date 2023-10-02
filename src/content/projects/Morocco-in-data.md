@@ -5,6 +5,7 @@ articleTitle: Morocco in data
 author: Hassan ben haj bouih
 description:  Morocco in data is a web app where you can access consolidated data on Morocco's demographics, economy and more.
   The data was collected from multiple sources and displayed in one place.
+shortDescription: All the data about Morocco
 cover: '../../assets/moroccoindata_gif.gif'
 coverAlt: 'Project preview g i f'
 tags:

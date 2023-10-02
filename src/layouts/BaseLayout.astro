@@ -3,29 +3,36 @@ import { SEO } from "astro-seo";
 import { ViewTransitions } from "astro:transitions";
 import Nav from "../components/Nav.astro";
 import twitter_card from "../assets/seo/twitter_card.png";
-const { pageTitle } = Astro.props;
+const currentUrl = Astro.url
+const { 
+  pageTitle, 
+  siteTitle, 
+  pageDescription, 
+  shortDescription 
+} = Astro.props;
+
 ---
 
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <SEO
-      title={pageTitle}
-      description="Hassan is a software developer with experience building fullStack websites, with a focus on making websites efficient & fast"
+      title={ pageTitle }
+      description= { pageDescription } 
       openGraph={{
         basic: {
-          title: "Hassan ben haj bouih - A Software developer ",
+          title: siteTitle,
           type: "website",
           image:
             "https://github.com/Hassanbhb/Personal-website/blob/main/src/assets/seo/twitter_card.png?raw=true",
-          url: "https://hassanbenhajbouih.com",
+          url: currentUrl,
         },
       }}
       twitter={{
         card: "summary_large_image",
         creator: "@hassan_bhb",
         title: pageTitle,
-        description: "Building efficient and fast websites",
+        description: shortDescription,
         image: twitter_card.src,
       }}
       extend={{
@@ -37,12 +44,11 @@ const { pageTitle } = Astro.props;
           },
           {
             name: "twitter:title",
-            content: "Hassan ben haj bouih - Software developer",
+            content: siteTitle,
           },
           {
             name: "twitter:description",
-            content:
-              "I am a software developer with experience building fullStack websites, with a focus on making websites efficient & fast",
+            content: pageDescription ,
           },
         ],
       }}

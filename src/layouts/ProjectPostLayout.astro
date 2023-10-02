@@ -3,10 +3,15 @@ import { Image } from "astro:assets";
 import BaseLayout from "./BaseLayout.astro";
 import Footer from "../components/Footer.astro";
 
-const { pageTitle, articleTitle, author, cover, coverAlt} = Astro.props
+const { pageTitle, articleTitle, author, article, cover, coverAlt} = Astro.props
 ---
 
-<BaseLayout pageTitle={pageTitle} >
+<BaseLayout 
+pageTitle={pageTitle} 
+siteTitle={articleTitle} 
+pageDescription={article.data.description}
+shortDescription={article.data.shortDescription}
+>
   <article class="prose lg:prose-xl dark:prose-invert dark:prose-a:text-primary w-5/6 m-auto mt-16 mb-16">
     <h1 class="text-orange font-medium md:mb-1">{ articleTitle }</h1>
     <p class="m-0 font-thin text-sm"><b>Author: </b> { author } </p>

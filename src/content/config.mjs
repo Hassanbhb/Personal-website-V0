@@ -6,6 +6,7 @@ const projectsCollection = defineCollection({
     pageTitle: z.string(),
     articleTitle: z.string(),
     author: z.string(),
+    description: z.string(),
     cover: image(),
     coverAlt: z.string(),
     tags: z.array(z.string()),
