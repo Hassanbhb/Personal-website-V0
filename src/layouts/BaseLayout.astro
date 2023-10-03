@@ -10,7 +10,7 @@ const {
   pageDescription, 
   shortDescription 
 } = Astro.props;
-
+console.log(siteTitle, currentUrl.href)
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -25,7 +25,7 @@ const {
           type: "website",
           image:
             "https://github.com/Hassanbhb/Personal-website/blob/main/src/assets/seo/twitter_card.png?raw=true",
-          url: currentUrl,
+          url: currentUrl.href,
         },
       }}
       twitter={{
