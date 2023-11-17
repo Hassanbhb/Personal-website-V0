@@ -3,22 +3,17 @@ import { SEO } from "astro-seo";
 import { ViewTransitions } from "astro:transitions";
 import Nav from "../components/Nav.astro";
 import twitter_card from "../assets/seo/twitter_card.png";
-const currentUrl = Astro.url
-const { 
-  pageTitle, 
-  siteTitle, 
-  pageDescription, 
-  shortDescription 
-} = Astro.props;
-console.log(siteTitle, currentUrl.href)
+const currentUrl = Astro.url;
+const { pageTitle, siteTitle, pageDescription, shortDescription } = Astro.props;
+console.log(siteTitle, currentUrl.href);
 ---
 
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <SEO
-      title={ pageTitle }
-      description= { pageDescription } 
+      title={pageTitle}
+      description={pageDescription}
       openGraph={{
         basic: {
           title: siteTitle,
@@ -48,7 +43,7 @@ console.log(siteTitle, currentUrl.href)
           },
           {
             name: "twitter:description",
-            content: pageDescription ,
+            content: pageDescription,
           },
         ],
       }}
@@ -58,9 +53,15 @@ console.log(siteTitle, currentUrl.href)
     <meta name="generator" content={Astro.generator} />
     <ViewTransitions />
     <script is:inline>
-      const storedTheme = localStorage.getItem('theme')
+      const storedTheme = localStorage.getItem("theme");
       document.documentElement.classList.add(storedTheme);
     </script>
+    <!-- Pixel Code for https://fastaxista.com/ -->
+    <script
+      defer
+      src="https://fastaxista.com/pixel/FkAgsX9nDdwm8VVZ4xJMpFLXQ0suQAbG"
+    ></script>
+    <!-- END Pixel Code -->
   </head>
   <body
     class="dark:bg-black bg-white text-black dark:text-primary lg:w-4/6 lg:m-auto mb-16 md:mb-0"
